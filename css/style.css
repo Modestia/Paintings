@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+@font-face{
+    font-family: 'MyWebFontBold';
+    src: url('fonts/Helvetica Monospaced W01 Bd.ttf');
+}
+@font-face{
+    font-family: 'MyWebFont';
+    src: url('fonts/Helvetica Monospaced W01.ttf');
+}
+
+input[type="text"] {
+   border: 0px solid #111; 
+   background: rgba(0, 0, 0, .0) !important; 
+   outline: none;  
+   height: 60px; 
+   width: 200px;
+   color: #ffffff; 
+   font-size: 48px;
+   font-family: MyWebFont; 
+}
+
+/*Main page*/
+
+.content {
+    position: relative;
+}
+
+    .header {
+        height: 120px;
+        background-color: #171717;
+    }
+        .header-wrapper {
+            margin: 0 auto;
+            width: 1100px;
+            height: 120px;
+            display: table;
+        }
+            .menu {
+                height: 120px;
+                margin-left: 5px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .logo {
+                height: 120px;
+                width: 100%;
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .logo img{
+                height: 90px;
+                margin-left: calc(50% - 45px); 
+            }
+            .search {
+                height: 120px;
+                margin-right: 5px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+                .search a {
+                    float: right;
+                }
+
+    .filter-bar {
+        height: 120px;
+    }
+        .filter-bar-wrapper {
+            margin: 0 auto;
+            display: table;
+        }
+            .filter-bar-element {
+                height: 120px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+                .filter-bar-element a {
+                    font-family: MyWebFontBold;
+                    font-size: 16px;
+                    text-decoration: none;
+                    text-align: right;
+                    color: #171717;
+                    border: 2px solid #171717;
+                    padding: 15px;
+                    font-weight: bold;
+                    margin: 0 10px;
+                    transition: 300ms;
+                }
+                .filter-bar-element a:hover {
+                    background-color: #171717;
+                    color: white;
+                }
+
+        .gallery-wrapper {
+            width: 1100px;
+            margin: 0 auto;
+        }
+            .gallery-element {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                width: 364px;
+                height: 363px;
+                background-color: #171717;
+            }
+                .gallery-element a {
+                    text-decoration: none;
+                }
+                .gallery-element-info {
+                    font-family: MyWebFont;
+                    position: absolute;
+                    top: 0; left: 0;
+                    background-color: rgba(0, 0, 0, .0);
+                    color: rgba(255, 255, 255, .0);
+                    width: 100%;
+                    height: 100%;
+                    transition: 300ms;
+                }
+                .gallery-element img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; /* заполнение блока тегом img */
+                    object-position: center; /* центрирование картинки внутри блока*/
+                }
+                .gallery-element-info:hover {
+                    background-color: rgba(0, 0, 0, .8);
+                    color: rgb(255, 255, 255);
+                }
+                    .short-description {
+                        position: absolute;
+                        bottom: 0;
+                        margin: 0px 0px 30px 30px;
+                    }
+                        .short-description p {
+                            padding: 3px 0px;
+                        }
+.open-menu {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: table;
+    position: fixed;
+    top: 0;
+}
+ .hiden {
+    display: none !important;
+}
+    .open-menu ul {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .ww1 {
+        display: block;
+    }
+    .ww2 {
+        display: table;
+        width: 100%;
+        height: calc(100% - 300px);
+    }
+    .om-menu {
+        height: 120px;
+        margin-left: 5px;
+        display: table-cell;
+        vertical-align: middle;
+    }
+        .open-menu li {
+            font-family: MyWebFont;
+            font-size: 36px;
+            text-align: center;
+            margin: 15px 0px;
+            list-style-type: none;
+        }
+            .open-menu a {
+                text-decoration: none;
+                color: white;
+            }
+            .close-menu {
+                height: 120px;
+            }
+.open-search {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    display: table;
+    position: fixed;
+    top: 0;
+}
+    .open-search-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .close-search {
+        float: right;
+    }
+        .open-search-wrapper input {
+            display: block;
+            margin: 0 auto;
+        }
+        .os-search {
+            margin-right: 5px;
+            display: table-cell;
+            vertical-align: middle;
+        }
+/* Picture of one page*/
+.picture {
+    font-family: MyWebFont;
+    display: none;
+}
+    .picture-wrap {
+        margin: 0 auto;
+        width: 1100px;
+        background-color: #F5F5F5;
+    }
+        .picture-wrap img {
+            display: inline-block;
+            max-width: 50%;
+            height: auto;
+        }
+        .picture-description {
+            width: 50%;
+            float: right;
+            display: inline-block;
+            overflow: hidden;
+        }
+        .picture-description h3{
+            margin-top: 50px;
+            padding: 0px 0px 20px 50px;
+            font-family: MyWebFontBold;
+            font-size: 19px;
+        }
+        .picture-description p {
+            font-family: MyWebFontBold;
+            font-size: 16px;
+            padding: 0px 20px 20px 50px;
+        }
+        .picture-description span {
+            font-family: MyWebFont;
+        }
+
+/*Adaptive design*/
+
+@media screen and (max-width: 1150px) {
+    .header-wrapper, .gallery-wrapper {
+        width: 884px;
+    }
+    .gallery-element {
+        width: 292px;
+        height: 292px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .header-wrapper, .gallery-wrapper, .filter-bar-wrapper {
+        width: 732px;
+    } 
+        .filter-bar-element a {
+            font-size: 14px;
+            padding: 15px 10px;
+        }
+
+    .gallery-element {
+        width: 364px;
+        height: 364px;
+    }
+}
+@media screen and (max-width: 764px) {
+    .header-wrapper, .gallery-wrapper, .filter-bar-wrapper {
+        width: 550px;
+    } 
+    .gallery-element {
+        width: 540px;
+        height: 540px;
+    }
+    .filter-bar-wrapper {
+            height: 120px;
+        }
+            .filter-bar-element {
+                display: inline-block;
+                height: auto;
+                margin: 20px 0px;
+            }
+            .filter-bar-element a {
+                text-align: center;
+            }
+}
+@media screen and (max-width: 540px) {
+    .header-wrapper, .gallery-wrapper, .filter-bar-wrapper {
+        width: 100%;
+    } 
+        .menu a, .om-menu a{
+            margin-left: 15px;
+        }
+        .search a, .os-search a{
+            margin-right: 15px;
+        }
+    .gallery-element {
+        width: 100%;
+    }
+}
+

@@ -14,6 +14,20 @@ $(function(){
 		}
 	});
 
+	// Filter buttons in dropdown menu
+	$('.filter-bar-element-m a').on('click', function(e) {
+		e.preventDefault();
+		var self = $(this);
+		var elToShowM = self.parents('.filter-bar-element-m').attr('rel');
+		if( elToShowM == '.all'){
+			$('.gallery-element').show(300);
+		}
+		else{
+			$('.gallery-element').hide(300);
+			$(elToShowM).show(300);
+		}
+	});
+
 	// Menu button 
 	$('.menu a, .close-menu').on('click', function(e) {
 		e.preventDefault();
@@ -47,7 +61,12 @@ $(function(){
 		$('.picture p:nth-child(2) span').text(artist);
 		$('.picture p:nth-child(3) span').text(price);
 	});
-
+	// Adaptive filter button 
+	$('.filter-bar-button a').on('click', function(e){
+		e.preventDefault();
+		$('.dropdown-filter').slideToggle();
+		$('.dropdown-filter').addClass('animated fadeIn');
+	});
 });
 
 

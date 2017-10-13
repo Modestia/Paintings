@@ -92,6 +92,46 @@ input[type="text"] {
                     background-color: #171717;
                     color: white;
                 }
+        .filter-bar-button {
+            display: none;
+            vertical-align: middle;
+            text-align: center;
+        }
+            .filter-bar-button a {
+                font-size: 22px;
+                font-family: MyWebFont;
+                text-decoration: none;
+                color: #171717;
+                padding: 20px;
+                border: 2px solid #171717;
+                transition: 300ms;
+            }
+            .filter-bar-button a:hover {
+                background-color: #171717;
+                color: white;
+            }
+        .dropdown-filter {
+            display: none;
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            text-align: center;
+        }
+            .dropdown-filter a {
+                display: block;
+                font-size: 16px;
+                font-family: MyWebFont;
+                text-decoration: none;
+                color: #171717;
+                padding: 10px;
+                border: 2px solid #171717;
+                margin-bottom: 10px;
+                transition: all .3s;
+            }
+            .dropdown-filter a:hover {
+                background-color: #171717;
+                color: white;
+            }
 
         .gallery-wrapper {
             width: 1100px;
@@ -117,6 +157,9 @@ input[type="text"] {
                     width: 100%;
                     height: 100%;
                     transition: 300ms;
+                }
+                .gallery-element-p {
+                    object-position: top !important;
                 }
                 .gallery-element img{
                     max-width: 100%;
@@ -271,8 +314,8 @@ input[type="text"] {
         width: 550px;
     } 
     .gallery-element {
-        width: 540px;
-        height: 540px;
+        width: calc(50% - 3px);
+        max-height: 274px;
     }
     .filter-bar-wrapper {
             height: 120px;
@@ -282,11 +325,13 @@ input[type="text"] {
                 height: auto;
                 margin: 20px 0px;
             }
-            .filter-bar-element a {
-                text-align: center;
-            }
 }
-@media screen and (max-width: 540px) {
+@media screen and (min-width: 481px){
+    .dropdown-filter{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 480px) {
     .header-wrapper, .gallery-wrapper, .filter-bar-wrapper {
         width: 100%;
     } 
@@ -298,6 +343,13 @@ input[type="text"] {
         }
     .gallery-element {
         width: 100%;
+        height: 300px;
+    }
+    .filter-bar-element {
+        display: none;
+    }
+    .filter-bar-button {
+        display: table-cell;
     }
 }
 

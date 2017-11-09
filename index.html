@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive-design.css">
     <title>Gallery</title>
 </head>
 <body>
 
-    <div class="content">
+    
         <div class="header">
             <div class="header-wrapper">
                 <div class="menu">
@@ -30,6 +33,33 @@
                     </a>   
                 </div>
             </div>
+        </div>
+        
+        <div class="artists-list">
+            <div class="artists-list-title">
+                <a href="artists/artists.html">artists</a>
+            </div>
+            <div class="artists-list-block">
+                <a href="artists/leo.html">Leonardo da Vinci</a>
+                <a href="#">Pablo Picasso</a>
+                <a href="#">Vincent van Gogh</a>
+                <a href="#">Claude Monet</a>
+                <a href="#">David Michelangelo</a>
+            </div>  
+        </div>
+
+        <div class="slider">
+            <div id="owl-demo" class="owl-carousel">
+                <div class="item"><img src="images/snslide3.jpg"></div>
+                <div class="item"><img src="images/slide2.jpg"></div>
+            </div>
+        </div>
+        
+        
+
+
+        <div class="gallery-title">
+            <h1>gallery</h1>
         </div>
         <div class="filter-bar">
             <div class="filter-bar-wrapper">
@@ -69,7 +99,9 @@
                         <a href="#">ABSTRACTION</a>
                     </div>
             </div>
-        <div class="gallery">
+        
+        </div>
+    <div class="gallery">
             <div class="gallery-wrapper">
             <!--
 
@@ -86,7 +118,7 @@
             -->
                 <div class="gallery-element portrait">
                     <img src="images/The Mona Lisa.jpg" id="galElem" class="gallery-element-p">
-                    <a href="#" class="gallery-element-info" data-img="images/The Mona Lisa.jpg" data-name="Mona Lisa" data-artist="Leonardo Da Vinci" data-price="10000$">
+                    <a href="paintings/mona_lisa.html" class="gallery-element-info" data-img="images/The Mona Lisa.jpg" data-name="Mona Lisa" data-artist="Leonardo Da Vinci" data-price="10000$">
                         <div class="short-description">
                             <p>Name: Mona Lisa</p>
                             <p>Artist: Leonardo Da Vinci</p>
@@ -96,7 +128,7 @@
                 </div>
                 <div class="gallery-element history">
                     <img src="images/Starry Night.jpg" id="galElem"> 
-                    <a href="#" class="gallery-element-info" data-img="images/Starry Night.jpg" data-name="Starry Night" data-artist="Unknown" data-price="1400$">
+                    <a href="paintings/starry_night.html" class="gallery-element-info" data-img="images/Starry Night.jpg" data-name="Starry Night" data-artist="Unknown" data-price="1400$">
                         <div class="short-description">
                             <p>Name: Starry Night</p>
                             <p>Artist: Unknown</p>
@@ -186,8 +218,6 @@
 
             -->
             </div>
-        </div>
-       
     </div>
 
      <div class="open-menu hiden">
@@ -201,7 +231,7 @@
         <div class="ww2">
             <ul>
                 <li><a href="index.html">HOME</a></li>
-                <li><a href="#">HOW TO BID</a></li>
+                <li><a href="artists/artists.html">ARTISTS</a></li>
                 <li><a href="#">ABOUT US</a></li>
                 <li><a href="#">CONTACTS</a></li>
             </ul>
@@ -223,24 +253,17 @@
         </div>
     </div>
 
-    <div class="picture">
-        <div class="picture-wrap">
-            <div class="picture-img-block"> 
-                <img src="images/The Mona Lisa.jpg">
-            </div>
-            <div class="picture-description">
-                <h3>Name:<br/><span></span></h3>
-                <p>Artist:<br/><span></span></p>
-                <p>Current Price:<br/><span></span></p>
-                <p>Description:<br/> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quo iure enim vel accusantium tempore quod natus nam debitis, ipsa, in repellendus mollitia ex maiores ratione libero distinctio nisi iste!</span></p>
-                <a href="#">Go to auction page</a>
-            </div>
+    <div class="footer">
+        <div class="footer-wrap">
+            
         </div>
     </div>
 
+
+
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/Javascript" src="js/script.js">
-    </script>
-    
+    <script src="js/owl.carousel.js"></script>
+    <script type="text/Javascript" src="js/script.js"></script>
+    <script type="text/Javascript" src="js/owl.mystyle.js"></script>
 </body>
 </html>

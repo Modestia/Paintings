@@ -2,16 +2,16 @@
     margin: 0;
     padding: 0;
 }
-@font-face{
+@font-face {
     font-family: 'MyWebFontBold';
     src: url('fonts/Helvetica Monospaced W01 Bd.ttf');
 }
-@font-face{
+@font-face {
     font-family: 'MyWebFont';
     src: url('fonts/Helvetica Monospaced W01.ttf');
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="submit"] {
    border: 0px solid #111; 
    background: rgba(0, 0, 0, .0) !important; 
    outline: none;  
@@ -24,9 +24,7 @@ input[type="text"] {
 
 /*Main page*/
 
-.content {
-    position: relative;
-}
+
 
     .header {
         height: 120px;
@@ -63,7 +61,50 @@ input[type="text"] {
                 .search a {
                     float: right;
                 }
-
+    
+    .artists-list {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+        .artists-list-title {
+            margin-top: 30px;
+        }
+            .artists-list-title a {
+                font-family: MyWebFont;
+                text-transform: uppercase;
+                margin-top: 30px;
+                font-size: 2em;
+                text-decoration: none;
+                color: #000;
+                font-weight: bold;
+            }
+        .artists-list-block {
+            height: 120px;
+            display: flex;
+            align-items: center;
+        }
+            .artists-list-block a {
+                font-family: MyWebFontBold;
+                font-size: 16px;
+                text-decoration: none;
+                padding: 0px 15px;
+                color: #111;
+            }
+            .artists-list-block a:hover {
+                text-decoration: underline;
+            }
+    
+    .gallery-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+        .gallery-title h1 {
+            font-family: MyWebFont;
+            text-transform: uppercase;
+            margin-top: 30px;
+        }
     .filter-bar {
         height: 120px;
     }
@@ -135,6 +176,7 @@ input[type="text"] {
 
         .gallery-wrapper {
             width: 1100px;
+            height: 1100px;
             margin: 0 auto;
         }
             .gallery-element {
@@ -186,6 +228,7 @@ input[type="text"] {
     width: 100%;
     background-color: rgba(0, 0, 0, .8);
     display: table;
+    z-index: 9;
     position: fixed;
     top: 0;
 }
@@ -229,6 +272,7 @@ input[type="text"] {
     width: 100%;
     background-color: rgba(0, 0, 0, .8);
     display: table;
+    z-index: 9;
     position: fixed;
     top: 0;
 }
@@ -251,7 +295,6 @@ input[type="text"] {
 /* Picture of one page*/
 .picture {
     font-family: MyWebFont;
-    display: none;
 }
     .picture-wrap {
         margin: 0 auto;
@@ -265,6 +308,7 @@ input[type="text"] {
         .picture-wrap .picture-img-block img {
             width: 100%;
             cursor: pointer;
+            margin: 0 auto;
         }
         .full-size-img {
             width: auto !important;
@@ -299,101 +343,114 @@ input[type="text"] {
             padding: 0px 20px 20px 50px;
         }
 
-/*Adaptive design*/
-@media screen and (max-width: 1150px) {
-    .header-wrapper, .gallery-wrapper, .picture-wrap {
-        width: 884px;
-    }
-    .gallery-element {
-        width: 292px;
-        height: 292px;
-    }
+.artists-page {
+    margin-top: 3px;
 }
-@media screen and (max-width: 950px) {
-    .header-wrapper, .gallery-wrapper, .filter-bar-wrapper, .picture-wrap {
-        width: 732px;
-    } 
-        .filter-bar-element a {
-            font-size: 14px;
-            padding: 15px 10px;
-        }
-
-    .gallery-element {
-        width: 364px;
-        height: 364px;
+    .artists-page-wrap {
+        width: 1100px;
+        margin: 0 auto;
     }
-    .picture-img-block {
-        width: 60%;
-    }
-    .picture-description {
-        width: 40%;
-    }
-}
-@media screen and (max-width: 764px) {
-    .header-wrapper, .gallery-wrapper, .filter-bar-wrapper, .picture-wrap {
-        width: 550px;
-    } 
-    .gallery-element {
-        width: calc(50% - 3px);
-        max-height: 274px;
-    }
-    .filter-bar-wrapper {
+        .artists-title {
             height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-            .filter-bar-wrapper {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+        .artists-page-wrap h1 {
+            font-family: MyWebFont;
+            text-transform: uppercase;
+        }
+        .artists-element {
+                display: inline-block;
+                position: relative;
+                overflow: hidden;
+                width: 364px;
+                height: 363px;
+                background-color: #171717;
             }
-                .filter-bar-element {
-                    height: auto;
-                    margin: 20px 0px;
+                .artists-element a {
+                    text-decoration: none;
                 }
-    .picture-img-block {
-        width: 100%;
-    }
-    .picture-description {
-        width: 100%;
-    }
-        .picture-description h3{
-            margin-top: 30px;
-            padding-left: 0;
-        }
-        .picture-description p {
-            padding-left: 0;
-        }
-        .picture-description a {
-            padding-left: 0;
-        }
+                .artists-element img{
+                    max-width: 100%;
+                    max-height: 100%;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; /* заполнение блока тегом img */
+                    object-position: center; /* центрирование картинки внутри блока*/
+                }
 
 
-@media screen and (min-width: 621px){
-    .dropdown-filter{
-        display: none !important;
+
+.feedback {
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    display: none;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    font-family: MyWebFont;
+}   
+    .feedback .header {
+        position: absolute;
+        width: 1100px;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0);
     }
-}
-@media screen and (max-width: 620px) {
-    .header-wrapper, .gallery-wrapper, .filter-bar-wrapper {
-        width: 100%;
-    } 
-        .menu a, .om-menu a{
-            margin-left: 15px;
+        .close-feedback-block {
+            float: right;
+            margin-top: 44px;
         }
-        .search a, .os-search a{
-            margin-right: 15px;
+    .form-block {
+        width: 400px;
+    }
+        .paint-name {
+            color: red @important;
+            font-size: 18px @important;
         }
-    .gallery-element {
-        width: 100%;
-        height: 300px;
-    }
-    .filter-bar-wrapper {
-        display: table;
-    }
-    .filter-bar-element {
-        display: none;
-    }
-    .filter-bar-button {
-        display: table-cell;
-    }
+        .form-block p {
+            font-size: 48px;
+            color: white;
+            margin: 10px 0px;
+        }
+        
+        .form-block input[type="text"], input[type="email"], input[type="submit"] {
+            width: 400px;
+            font-size: 28px;
+            margin: 10px 0px;
+        }
+        .form-block input[type="submit"] {
+            width: auto;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0, 0, 0, 0);
+            transition: 300ms;
+        }
+        .form-block input[type="submit"]:hover {
+            border-bottom: 1px solid white;
+        }
+         textarea {
+            font-size: 24px;
+            color: white;
+            margin: 10px 0px;
+            background: rgba(0, 0, 0, .0) !important;
+            outline: none;
+        }
+
+.full-size-feedback {
+    display: flex;
 }
+
+.footer {
+     height: 120px;
+     width: 100%;
+     background-color: #171717;
+}
+
+
+
+
+
 

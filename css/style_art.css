@@ -7,7 +7,9 @@
     src: url('fonts/Helvetica Monospaced W01.ttf');
 }
 
-
+.in-art-page {
+    height: auto;
+}
 .artist {
 	font-family: MyWebFont;
 }

@@ -309,6 +309,8 @@ input[type="text"], input[type="email"], input[type="submit"] {
             display: table-cell;
             vertical-align: middle;
         }
+
+
 /* Picture of one page*/
 .picture {
     font-family: MyWebFont;
@@ -335,6 +337,9 @@ input[type="text"], input[type="email"], input[type="submit"] {
             width: 50%;
             float: right;
         }
+        .picture-description-inner {
+            padding: 50px;
+        }
         .full-size-description {
             width: 100%;
         }
@@ -342,23 +347,22 @@ input[type="text"], input[type="email"], input[type="submit"] {
             padding: 0px 0px 20px 0px !important;
         }
         .picture-description h3{
-            margin-top: 50px;
-            padding: 0px 0px 20px 50px;
             font-family: MyWebFontBold;
             font-size: 19px;
         }
         .picture-description p {
             font-family: MyWebFontBold;
             font-size: 16px;
-            padding: 0px 20px 20px 50px;
+            padding: 15px 0;
         }
         .picture-description span {
             font-family: MyWebFont;
         }
         .picture-description a {
             color: #000;
-            padding: 0px 20px 20px 50px;
         }
+
+
 
 .artists-page {
     margin-top: 3px;
@@ -419,16 +423,17 @@ input[type="text"], input[type="email"], input[type="submit"] {
         background-color: rgba(0, 0, 0, 0);
     }
         .close-feedback-block {
-            float: right;
-            margin-top: 44px;
+            height: 120px;
+            margin-right: 5px;
+            display: table-cell;
+            vertical-align: middle;
         }
+            .close-feedback-block a{
+                float: right;
+            }
     .form-block {
         width: 400px;
     }
-        .paint-name {
-            color: red @important;
-            font-size: 18px @important;
-        }
         .form-block p {
             font-size: 48px;
             color: white;

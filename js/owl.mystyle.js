@@ -1,5 +1,5 @@
 $(function(){
-	$('#owl-demo').owlCarousel({
+	$('#owl-slider').owlCarousel({
 		items: 1,
 		loop: true,
 		mouseDrug: false,
@@ -10,4 +10,10 @@ $(function(){
 		animateIn: 'fadeIn',
 		animateOut: 'fadeOut'
 	});
+
+	/*$('#owl-artists').owlCarousel({
+		items: 1,
+		nav: true,
+		navText: ["<img src=\"images/icons/prev3.png\">","<img src=\"images/icons/next3.png\">"]
+	});*/
 });

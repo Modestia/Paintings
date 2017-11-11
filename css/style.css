@@ -52,13 +52,13 @@ input[type="text"], input[type="email"], input[type="submit"] {
                 height: 90px;
                 margin-left: calc(50% - 45px); 
             }
-            .search {
+            .mail {
                 height: 120px;
                 margin-right: 5px;
                 display: table-cell;
                 vertical-align: middle;
             }
-                .search a {
+                .mail a {
                     float: right;
                 }
     
@@ -80,20 +80,23 @@ input[type="text"], input[type="email"], input[type="submit"] {
                 font-weight: bold;
             }
         .artists-list-block {
-            height: 120px;
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
+            justify-content: center;
+            text-align: center;
         }
-            .artists-list-block a {
-                font-family: MyWebFontBold;
-                font-size: 16px;
-                text-decoration: none;
-                padding: 0px 15px;
-                color: #111;
-            }
-            .artists-list-block a:hover {
-                text-decoration: underline;
-            }
+                .artists-list-block a {
+                    font-family: MyWebFontBold;
+                    font-size: 16px;
+                    text-decoration: none;
+                    padding: 0px 15px;
+                    margin: 50px 0px;
+                    color: #111;
+                }
+                .artists-list-block a:hover {
+                    text-decoration: underline;
+                }
     
     .gallery-title {
         display: flex;
@@ -173,6 +176,20 @@ input[type="text"], input[type="email"], input[type="submit"] {
                 background-color: #171717;
                 color: white;
             }
+
+.slider .owl-carousel .item {
+    height: 400px;
+}
+
+.slider .owl-carousel .item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: center;
+    cursor: pointer;
+}
 
         .gallery-wrapper {
             width: 1100px;
@@ -388,6 +405,7 @@ input[type="text"], input[type="email"], input[type="submit"] {
     background-color: rgba(0, 0, 0, .8);
     position: fixed;
     top: 0;
+    z-index: 10;
     display: none;
     flex-flow: column;
     justify-content: center;
@@ -448,6 +466,31 @@ input[type="text"], input[type="email"], input[type="submit"] {
      width: 100%;
      background-color: #171717;
 }
+    .footer-wrap {
+        width: 1100px;
+        margin: 0 auto;
+    }
+        .rights {
+            height: 120px;
+            width: 100%;
+            display: table-cell;
+            vertical-align: middle;
+            color: white;
+            text-align: center;
+            font-family: MyWebFont;
+            font-size: 12px;
+        }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

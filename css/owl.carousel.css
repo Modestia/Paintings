@@ -76,13 +76,27 @@
     left: 0;
     margin-left: 10%;
    }
+   .artists-list .owl-carousel .owl-nav .owl-prev {
+    left: 0;
+    margin-left: 0px;
+   }
    .owl-carousel .owl-nav .owl-next {
     right: 0;
     margin-right: 10%;
    }
+   .artists-list .owl-carousel .owl-nav .owl-next {
+    right: 0;
+    margin-right: 0px;
+   }
   .owl-carousel .owl-nav .owl-prev img {
     padding: 13px 9px 13px 7px;
     background-color: rgba(255, 255, 255, 0.3);
+    height: 60px;
+    transition: 300ms;
+  }
+  .artists-list .owl-carousel .owl-nav .owl-prev img {
+    padding: 13px 9px 13px 7px;
+    background-color: rgba(255, 255, 255, 0);
     height: 60px;
     transition: 300ms;
   }
@@ -92,9 +106,19 @@
     height: 60px;
     transition: 300ms;
   }
+  .artists-list .owl-carousel .owl-nav .owl-next img {
+    padding: 13px 7px 13px 9px;
+    background-color: rgba(255, 255, 255, 0);
+    height: 60px;
+    transition: 300ms;
+  }
   .owl-carousel .owl-nav .owl-prev img:hover,
   .owl-carousel .owl-nav .owl-next img:hover {
     background-color: #fff;
+  }
+  .artists-list .owl-carousel .owl-nav .owl-prev img:hover,
+  .artists-list .owl-carousel .owl-nav .owl-next img:hover {
+    background-color: rgba(255, 255, 255, 0);
   }
   .owl-carousel.owl-loaded {
     display: block; }

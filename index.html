@@ -27,9 +27,14 @@
                         <img src="images/icons/logo.png">
                     </a>
                 </div>
-                <div class="search">
+                <!-- <div class="search">
                     <a href="#">
                         <img src="images/icons/search32.png">    
+                    </a>   
+                </div> -->
+                <div class="mail">
+                    <a href="#" class="feedback-btn">
+                        <img src="images/icons/mail32.png">    
                     </a>   
                 </div>
             </div>
@@ -49,9 +54,10 @@
         </div>
 
         <div class="slider">
-            <div id="owl-demo" class="owl-carousel">
+            <div id="owl-slider" class="owl-carousel">
                 <div class="item"><img src="images/snslide3.jpg"></div>
                 <div class="item"><img src="images/slide2.jpg"></div>
+                <div class="item"><img src="images/slide3.jpg"></div>
             </div>
         </div>
         
@@ -237,8 +243,25 @@
             </ul>
         </div>
     </div>
-
-    <div class="open-search hiden">
+    <div class="feedback">
+        <div class="header">
+            <div class="close-feedback-block">
+                <a href="#" class="close-feedback"><img src="images/icons/close32.png"></a>
+            </div>
+        </div>
+        
+        <div class="form-block">
+            <form method="post" action="handler.php">
+                <p>Write to us</p>
+                <input type="text" name="first_name" id="first_name" placeholder="First name"><br>
+                <input type="text" name="second_name" id="second_name" placeholder="Second name"><br>
+                <input type="email" name="e-mail" id="e-mail" placeholder="E-mail">
+                <textarea name="comment" id="comment" cols="40" rows="4" placeholder="Comment"></textarea>
+                <input type="submit" name="submit" value="Send">
+            </form>
+        </div>
+    </div>
+    <!-- <div class="open-search hiden">
         <div class="ww1">
             <div class="header-wrapper">
                 <div class="os-search">
@@ -251,11 +274,28 @@
                   <input type="text" value="Search">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="footer">
         <div class="footer-wrap">
-            
+            <div class="menu">
+                <a href="#">
+                    <img src="images/icons/menu32.png">
+                </a>
+            </div>
+            <div class="rights">
+                <p>YarEl Group 2017. All rights reserved.</p>
+            </div>
+            <!-- <div class="search">
+                <a href="#">
+                    <img src="images/icons/search32.png">    
+                </a>   
+            </div> -->
+            <div class="mail">
+                <a href="#" class="feedback-btn">
+                    <img src="images/icons/mail32.png">    
+                </a>   
+            </div>
         </div>
     </div>
 

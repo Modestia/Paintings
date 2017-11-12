@@ -70,11 +70,11 @@ $(function(){
 		$('.dropdown-filter').slideToggle();
 		$('.dropdown-filter').addClass('animated fadeIn');
 	});
-	// Full size picture
+	/*// Full size picture
 	$('.picture-img-block img').on('click', function(){
 		$('.picture-img-block').toggleClass('full-size-img');
 		$('.picture-description').toggleClass('full-size-description');
-	});
+	});*/
 	// Show artists page
 	/*$('#artists').on('click', function(){
 		$('.filter-bar, .gallery, .picture').addClass('hiden');
@@ -94,6 +94,25 @@ $(function(){
 		$('.rights').fadeToggle(300);
 		$('.mail a').fadeToggle(300);
 	});
+
+	//Pop up window
+
+	//Hide popup when page is downloaded  
+	$(document).ready(function(){
+        $("#popup1").hide();
+    });
+    //Show PopUp
+    $('.picture-img-block img').on('click', function(e){
+    	e.preventDefault();
+    	$("#popup1").show();
+    	$('#popup1').addClass('animated fadeIn');
+    });
+    
+    //Hide PopUp
+    $('.b-popup').on('click', function(e){
+    	e.preventDefault();
+    	$("#popup1").hide();
+    });
 });
 
 

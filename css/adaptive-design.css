@@ -205,7 +205,10 @@
         margin: 5px 0px;
     }
     .form-block p {
-        font-size: 28px;
+        font-size: 32px;
+    }
+    .form-block textarea {
+        width: 300px;
     }
 }
 @media screen and (max-width: 450px) {

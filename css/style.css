@@ -2,14 +2,6 @@
     margin: 0;
     padding: 0;
 }
-@font-face {
-    font-family: 'MyWebFontBold';
-    src: url('fonts/Helvetica Monospaced W01 Bd.ttf');
-}
-@font-face {
-    font-family: 'MyWebFont';
-    src: url('fonts/Helvetica Monospaced W01.ttf');
-}
 
 input[type="text"], input[type="email"], input[type="submit"] {
    border: 0px solid #111; 
@@ -19,7 +11,7 @@ input[type="text"], input[type="email"], input[type="submit"] {
    width: 200px;
    color: #ffffff; 
    font-size: 48px;
-   font-family: MyWebFont; 
+   font-family: 'Fjalla One', sans-serif; 
 }
 
 /*Main page*/
@@ -29,39 +21,45 @@ body {
 }
 
     .header {
-        height: 120px;
+        height: 80px;
         background-color: #171717;
     }
         .header-wrapper {
             margin: 0 auto;
-            width: 1100px;
-            height: 120px;
-            display: table;
+            width: 1092px;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
             .menu {
-                height: 120px;
-                margin-left: 5px;
-                display: table-cell;
-                vertical-align: middle;
+                margin-left: 6px;
             }
-            .logo {
-                height: 120px;
-                width: 100%;
-                display: table-cell;
-                vertical-align: middle;
-            }
+                .menu a {
+                    text-decoration: none;
+                    color: white;
+                    font-family: 'Fjalla One', sans-serif;
+                    text-transform: uppercase;
+                }
+                .menu a:hover {
+                    text-decoration: underline;
+                }
             .logo img{
-                height: 90px;
-                margin-left: calc(50% - 45px); 
+                height: 60px;
+                margin-left: calc(50% - 10px); 
             }
             .mail {
-                height: 120px;
-                margin-right: 5px;
-                display: table-cell;
-                vertical-align: middle;
+                margin-right: 6px;
             }
                 .mail a {
                     float: right;
+                    text-decoration: none;
+                    color: white;
+                    font-family: 'Fjalla One', sans-serif;
+                    text-transform: uppercase;
+                }
+                .mail a:hover {
+                    text-decoration: underline;
                 }
     
     .artists-list {
@@ -71,9 +69,10 @@ body {
     }
         .artists-list-title {
             margin-top: 30px;
+            margin-bottom: 30px;
         }
             .artists-list-title a {
-                font-family: MyWebFont;
+                font-family: 'Fjalla One', sans-serif;
                 text-transform: uppercase;
                 margin-top: 30px;
                 font-size: 2em;
@@ -83,13 +82,28 @@ body {
             }
         .artists-list-block {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: center;
             text-align: center;
+            margin-bottom: 30px;
         }
+            .artists-list-block div {
+                width: 800px;
+            }
+            .fa-arrow-right {
+                position: absolute;
+                right: -20px;
+                top: 1px;
+                cursor: pointer;
+            }
+            .fa-arrow-left {
+                position: absolute;
+                left: -20px;
+                top: 1px;
+                cursor: pointer;
+            }
                 .artists-list-block a {
-                    font-family: MyWebFontBold;
+                    font-family: 'Fjalla One', sans-serif;
                     font-size: 16px;
                     text-decoration: none;
                     padding: 0px 15px;
@@ -106,7 +120,7 @@ body {
         align-items: center;
     }
         .gallery-title h1 {
-            font-family: MyWebFont;
+            font-family: 'Fjalla One', sans-serif;
             text-transform: uppercase;
             margin-top: 30px;
         }
@@ -123,7 +137,7 @@ body {
                 vertical-align: middle;
             }
                 .filter-bar-element a {
-                    font-family: MyWebFontBold;
+                    font-family: 'Fjalla One', sans-serif;
                     font-size: 16px;
                     text-decoration: none;
                     text-align: right;
@@ -145,7 +159,7 @@ body {
         }
             .filter-bar-button a {
                 font-size: 22px;
-                font-family: MyWebFont;
+                font-family: 'Fjalla One', sans-serif;
                 text-decoration: none;
                 color: #171717;
                 padding: 20px;
@@ -166,7 +180,7 @@ body {
             .dropdown-filter a {
                 display: block;
                 font-size: 16px;
-                font-family: MyWebFont;
+                font-family: 'Fjalla One', sans-serif;
                 text-decoration: none;
                 color: #171717;
                 padding: 10px;
@@ -195,21 +209,27 @@ body {
         .gallery-wrapper {
             width: 1100px;
             height: 1100px;
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
             margin: 0 auto;
         }
             .gallery-element {
-                display: inline-block;
                 position: relative;
                 overflow: hidden;
-                width: 364px;
-                height: 363px;
-                background-color: #171717;
+                width: 350px;
+                height: 350px;
+                background-color: #dbdbdb;
+                margin: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
                 .gallery-element a {
                     text-decoration: none;
                 }
                 .gallery-element-info {
-                    font-family: MyWebFont;
+                    font-family: 'Fjalla One', sans-serif;
                     position: absolute;
                     top: 0; left: 0;
                     background-color: rgba(0, 0, 0, .0);
@@ -222,12 +242,8 @@ body {
                     object-position: top !important;
                 }
                 .gallery-element img{
-                    max-width: 100%;
-                    max-height: 100%;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover; /* заполнение блока тегом img */
-                    object-position: center; /* центрирование картинки внутри блока*/
+                   max-width: 100%;
+                   max-height: 100%;
                 }
                 .gallery-element-info:hover {
                     background-color: rgba(0, 0, 0, .8);
@@ -245,7 +261,8 @@ body {
     height: 100vh;
     width: 100%;
     background-color: rgba(0, 0, 0, .9);
-    display: table;
+    display: flex;
+    flex-flow: column;
     z-index: 9;
     position: fixed;
     top: 0;
@@ -254,25 +271,23 @@ body {
     display: none !important;
 }
     .open-menu ul {
-        display: table-cell;
-        vertical-align: middle;
     }
     .ww1 {
-        display: block;
+        display: flex;
     }
     .ww2 {
-        display: table;
-        width: 100%;
-        height: calc(100% - 300px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin-top: -120px;
     }
     .om-menu {
-        height: 120px;
         margin-left: 5px;
-        display: table-cell;
-        vertical-align: middle;
+        jsutify-self: flex-end;
     }
         .open-menu li {
-            font-family: MyWebFont;
+            font-family: 'Fjalla One', sans-serif;
             font-size: 36px;
             text-align: center;
             margin: 15px 0px;
@@ -283,7 +298,7 @@ body {
                 color: white;
             }
             .close-menu {
-                height: 120px;
+                align-self: flex-end;
             }
 /* .open-search {
     height: 100vh;
@@ -314,7 +329,7 @@ body {
 
 /* Picture of one page*/
 .picture {
-    font-family: MyWebFont;
+    font-family: 'Fjalla One', sans-serif;
 }
     .picture-wrap {
         margin: 0 auto;
@@ -348,16 +363,18 @@ body {
             padding: 0px 0px 20px 0px !important;
         }
         .picture-description h3{
-            font-family: MyWebFontBold;
+            font-family: 'Fjalla One', sans-serif;
             font-size: 19px;
         }
         .picture-description p {
-            font-family: MyWebFontBold;
+            font-family: 'Fjalla One', sans-serif;
             font-size: 16px;
             padding: 15px 0;
+            font-weight: 600;
         }
         .picture-description span {
-            font-family: MyWebFont;
+            font-family: 'Fjalla One', sans-serif;
+            font-weight: 200;
         }
         .picture-description a {
             color: #000;
@@ -369,7 +386,7 @@ body {
     margin-top: 3px;
 }
     .artists-page-wrap {
-        width: 1100px;
+        width: 1092px;
         margin: 0 auto;
     }
         .artists-title {
@@ -379,28 +396,34 @@ body {
             align-items: center;
         }
         .artists-page-wrap h1 {
-            font-family: MyWebFont;
+            font-family: 'Fjalla One', sans-serif;
             text-transform: uppercase;
         }
-        .artists-element {
-                display: inline-block;
-                position: relative;
-                overflow: hidden;
-                width: 364px;
-                height: 363px;
-                background-color: #171717;
-            }
-                .artists-element a {
-                    text-decoration: none;
+        .artists-elements {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+            .artists-element {
+                    display: inline-block;
+                    position: relative;
+                    overflow: hidden;
+                    width: 350px;
+                    height: 350px;
+                    background-color: #171717;
+                    margin-bottom: 20px;
                 }
-                .artists-element img{
-                    max-width: 100%;
-                    max-height: 100%;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover; /* заполнение блока тегом img */
-                    object-position: center; /* центрирование картинки внутри блока*/
-                }
+                    .artists-element a {
+                        text-decoration: none;
+                    }
+                    .artists-element img{
+                        max-width: 100%;
+                        max-height: 100%;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover; /* заполнение блока тегом img */
+                        object-position: center; /* центрирование картинки внутри блока*/
+                    }
 
 
 
@@ -415,22 +438,23 @@ body {
     flex-flow: column;
     justify-content: center;
     align-items: center;
-    font-family: MyWebFont;
+    font-family: 'Fjalla One', sans-serif;
 }   
     .feedback .header {
         position: absolute;
         width: 1100px;
+        display: flex;
+        justify-content: flex-end;
         top: 0;
         background-color: rgba(0, 0, 0, 0);
     }
         .close-feedback-block {
-            height: 120px;
+            height: 90px;
             margin-right: 5px;
-            display: table-cell;
-            vertical-align: middle;
+            display: flex;
         }
             .close-feedback-block a{
-                float: right;
+                align-self: center;
             }
     .form-block {
         width: 400px;
@@ -459,6 +483,7 @@ body {
             border-bottom: 1px solid white;
         }
          textarea {
+            font-family: 'Fjalla One', sans-serif;
             font-size: 24px;
             color: white;
             width: 400px;
@@ -478,17 +503,17 @@ body {
      margin-top: 30px;
 }
     .footer-wrap {
-        width: 1100px;
+        width: 1092px;
         margin: 0 auto;
+        height: 90px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
         .rights {
-            height: 120px;
-            width: 100%;
-            display: table-cell;
-            vertical-align: middle;
             color: white;
             text-align: center;
-            font-family: MyWebFont;
+            font-family: 'Fjalla One', sans-serif;
             font-size: 12px;
         }
 

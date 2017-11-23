@@ -1,20 +1,13 @@
-@font-face{
-    font-family: 'MyWebFontBold';
-    src: url('fonts/Helvetica Monospaced W01 Bd.ttf');
-}
-@font-face{
-    font-family: 'MyWebFont';
-    src: url('fonts/Helvetica Monospaced W01.ttf');
-}
+
 
 .in-art-page {
     height: auto;
 }
 .artist {
-	font-family: MyWebFont;
+	font-family: 'Fjalla One', sans-serif;
 }
 	.artist-wrap {
-		width: 1100px;
+		width: 1085px;
 		margin: 0 auto;
 	}
 		.artist-main-block {
@@ -42,10 +35,11 @@
 					padding: 0px 0px 20px 50px;
 				}
 					.artist-short-info p span {
-						font-weight: 400;
+						font-weight: 300;
 					}
 		.artist-biography {
 			margin-bottom: 50px;
+			font-weight: 300;
 		}
 		.artist-biography h3 {
 			padding: 30px 0px 10px 0px;

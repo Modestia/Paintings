@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/adaptive-design.css">
+    <link rel="stylesheet" type="text/css" href="slick-master/slick/slick.css"/>
     <title>Gallery</title>
 </head>
 <body>
@@ -19,7 +21,7 @@
             <div class="header-wrapper">
                 <div class="menu">
                     <a href="#">
-                        <img src="images/icons/menu32.png">
+                        <p>menu</p>
                     </a>
                 </div>
                 <div class="logo">
@@ -34,7 +36,7 @@
                 </div> -->
                 <div class="mail">
                     <a href="#" class="feedback-btn">
-                        <img src="images/icons/mail32.png">    
+                        <p>write to us</p>    
                     </a>   
                 </div>
             </div>
@@ -45,11 +47,46 @@
                 <a href="artists/artists.html">artists</a>
             </div>
             <div class="artists-list-block">
-                <a href="artists/leo.html">Leonardo da Vinci</a>
-                <a href="#">Pablo Picasso</a>
-                <a href="#">Vincent van Gogh</a>
-                <a href="#">Claude Monet</a>
-                <a href="#">David Michelangelo</a>
+                <div>
+                    <h3>
+                        <a href="artists/leo.html">Leonardo da Vinci</a>
+                    </h3>
+                </div>
+                <div> 
+                    <h3> 
+                        <a href="#">Pablo Picasso</a> 
+                    </h3>
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">Vincent van Gogh</a> 
+                    </h3>
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">Claude Monet</a>
+                    </h3>
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">David Michelangelo</a>
+                    </h3>
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">Vincent van Gogh</a> 
+                    </h3>
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">Claude Monet</a>
+                    </h3>
+                </div>
+                <div>
+                    <h3>
+                        <a href="#">David Michelangelo</a>
+                    </h3>
+                </div>
             </div>  
         </div>
 
@@ -250,28 +287,29 @@
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="artists/artists.html">ARTISTS</a></li>
-                <li><a href="#">ABOUT US</a></li>
-                <li><a href="#">CONTACTS</a></li>
+                <!-- <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">CONTACTS</a></li> -->
             </ul>
         </div>
     </div>
     <div class="feedback">
         <div class="header">
-            <div class="header-wrapper">
+            
                 <div class="close-feedback-block">
                     <a href="#" class="close-feedback"><img src="images/icons/close32.png"></a>
                 </div>
-            </div>
+            
         </div>
         
         <div class="form-block">
             <form method="post" action="handler.php">
                 <p>Write to us</p>
-                <input type="text" name="first_name" id="first_name" placeholder="First name"><br>
-                <input type="text" name="second_name" id="second_name" placeholder="Second name"><br>
-                <input type="email" name="e-mail" id="e-mail" placeholder="E-mail">
+                <input type="text" name="first_name" id="first_name" placeholder="First name" required><br>
+                <input type="text" name="second_name" id="second_name" placeholder="Second name" required><br>
+                <input type="email" name="e-mail" id="e-mail" placeholder="E-mail" required>
+                <input type="text" name="phone_number" id="phone_number" placeholder="Phone number                                      *">
                 <textarea name="comment" id="comment" rows="4" placeholder="Comment"></textarea><br>
-                <input type="submit" name="submit" value="Send">
+                <a href="index.html"><input type="submit" name="submit" value="Send"></a>
             </form>
         </div>
     </div>
@@ -294,7 +332,7 @@
         <div class="footer-wrap">
             <div class="menu">
                 <a href="#">
-                    <img src="images/icons/menu32.png">
+                    <p>menu</p>
                 </a>
             </div>
             <div class="rights">
@@ -307,7 +345,7 @@
             </div> -->
             <div class="mail">
                 <a href="#" class="feedback-btn">
-                    <img src="images/icons/mail32.png">    
+                    <p>write to us</p>   
                 </a>   
             </div>
         </div>
@@ -319,5 +357,8 @@
     <script src="js/owl.carousel.js"></script>
     <script type="text/Javascript" src="js/script.js"></script>
     <script type="text/Javascript" src="js/owl.mystyle.js"></script>
+    <script type="text/javascript" src="slick-master/slick/slick.min.js"></script>
+    <script type="text/javascript" src="js/slick_options.js"></script>
+    <script src="https://use.fontawesome.com/f4c8dfd36b.js"></script>
 </body>
 </html>
